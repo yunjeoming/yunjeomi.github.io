@@ -19,6 +19,29 @@
 <!-- Theme CSS -->
 <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
+
+<script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
+<script>
+  function updateFeed(username) {
+    GitHubActivity.feed({ username: username, selector: '#feed', limit: 10});
+  }
+
+  $(document).ready(function() {
+    updateFeed('yunjeomi');
+  });
+</script>
+<style>
+
+  #feed {
+    width: 900px;
+    height: 500px;
+    margin: 30px 5px;
+  }
+</style>
 </head>
 
 <body>
@@ -33,14 +56,14 @@
 						<div class="primary-info">
 							<br>
 							<h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">이윤정</h1>
-							<div class="title mb-3">Back-end Developer</div>
+							<div class="title mb-3">Developer</div>
 						</div>
 						<div class="secondary-info ml-md-auto mt-2">
-							<br>
 							<ul class="list-unstyled">
 								<li class="mb-3"><a href="mailto:yunjeoming@gmail.com"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>yunjeoming@gmail.com</a></li>
 								<li class="mb-3"><a href="tel:010-8706-3155"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>010-8706-3155</a></li>
 								<li class="mb-3"><a href="https://github.com/yunjeomi" target = "_blank"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/yunjeomi</a></li>
+								<li class="mb-3"><span class="fa-container text-center mr-2"><i class="fas fa-map-marker-alt" data-fa-transform="grow-3"></i></span>Pyeongtaek, Korea</li>
 							</ul>
 						</div>
 					</div>
@@ -48,18 +71,21 @@
 			</header>
 			
 			<div class="resume-body p-5">
-				<!--//summary-section-->
+				<!-- Introduce -->
 				<section class="resume-section summary-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">INTRODUCE</h2>
 					<div class="resume-section-content">
-						<p class="mb-0">자기소개 내용 입력<p>
+						<p class="mb-0">안녕하세요... 추후입력<p>
 					</div>
 				</section>
 				
+				<!-- portfolio -->
 				<section class="resume-section experience-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">PORTFOLIO</h2>
 					<div class="resume-section-content">
 						<div class="resume-timeline position-relative">
+						
+							<!-- OBO -->
 							<article class="resume-timeline-item position-relative pb-5">
 								<div class="resume-timeline-item-header mb-2">
 									<div class="d-flex flex-column flex-md-row">
@@ -68,25 +94,37 @@
 									<div class="resume-position-time">2021.06.09 ~ 진행중</div>
 								</div>
 								<div class="resume-timeline-item-desc">
-									<p align=justify>OBO 설명</p>
-									<br clear="right">
-									<br>
+									<img src="assets/images/mallAdmin1.png" alt="임시파일" align=right vspace=20 hspace=20 width="400px" height="300px"><br>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">프로젝트 방식</h4>
+										<p>Model 2</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">개발 환경</h4>
+										<p>Window 10</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 프로그램</h4>
+										<p>Spring Tool Suite, HeidiSQL </p>
+										
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 언어</h4>
+										<p>Java, HTML5, JavaScript(JQuery), SQL</p>
+									
+									<!-- 링크 -->
 									<p>
-										<a href="#" target = "_blank">기능정의서</a>&nbsp; | &nbsp;<a href="#" target = "_blank">ERD(Table+View)</a>&nbsp; |&nbsp;
-										<a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">기능정의서</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">ERD</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>&nbsp;
 									</p>
-									<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-									<ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Spring</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">JavaScript(JQuery)</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">SQL</span></li>
-									</ul>
+									
+									<br clear="right">
+									<p align=justify>
+										OBO 프로젝트 설명
+									</p>
+									<br>
 								</div>
-
 							</article>
 							
+							<!-- QR -->
 							<article class="resume-timeline-item position-relative pb-5">
 								<div class="resume-timeline-item-header mb-2">
 									<div class="d-flex flex-column flex-md-row">
@@ -95,23 +133,33 @@
 									<div class="resume-position-time">2021.06.08 ~ 진행중</div>
 								</div>
 								<div class="resume-timeline-item-desc">
-									<p align=justify>QR 설명</p>
-									<br clear="right">
-									<br>
+									<img src="assets/images/mallAdmin1.png" alt="임시파일" align=right vspace=20 hspace=20 width="400px" height="300px"><br>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">프로젝트 방식</h4>
+										<p>Model 2</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">개발 환경</h4>
+										<p>Window 10</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 프로그램</h4>
+										<p>Spring Tool Suite, HeidiSQL </p>
+										
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 언어</h4>
+										<p>Java, HTML5, JavaScript(JQuery), SQL</p>
+									
+									<!-- 링크 -->
 									<p>
-										<a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>&nbsp;
 									</p>
-									<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-									<ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Spring</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">JavaScript(JQuery)</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">SQL</span></li>
-									</ul>
+									
+									<br clear="right">
+									<p align=justify>QR 설명</p>
+									<br>
 								</div>
 							</article>
 
+							<!-- sakila -->
 							<article class="resume-timeline-item position-relative pb-5">
 								<div class="resume-timeline-item-header mb-2">
 									<div class="d-flex flex-column flex-md-row">
@@ -120,31 +168,39 @@
 									<div class="resume-position-time">2021.05.12 ~ 진행중</div>
 								</div>
 								<div class="resume-timeline-item-desc">
+									<img src="assets/images/mallAdmin1.png" alt="임시파일" align=right vspace=20 hspace=20 width="400px" height="300px"><br>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">프로젝트 방식</h4>
+										<p>Model 2</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">개발 환경</h4>
+										<p>Window 10</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 프로그램</h4>
+										<p>Spring Tool Suite, HeidiSQL </p>
+										
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 언어</h4>
+										<p>Java, HTML5, JavaScript(JQuery), SQL</p>
+									
+									<!-- 링크 -->
+									<p>
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">기능정의서</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">ERD</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>&nbsp;
+									</p>
+									
+									<br clear="right">
 									<p align=justify>
-										<img src="assets/images/sakilaMain.png" align=right vspace=10 hspace=30><br>
-										영화 DVD 대여점 프로그램. MySql 영화관련 샘플 DB<a href="https://dev.mysql.com/doc/index-other.html">(Link)</a>에 데이터베이스 모델링, SQL을 사용하여
+										영화 DVD 대여점 프로그램. MySql 영화관련 <a href="https://dev.mysql.com/doc/index-other.html">샘플 DB</a>에 데이터베이스 모델링, SQL을 사용하여
 										사용자 인증과 커뮤니티 관련 테이블을 수정/추가함.(테이블19개, 뷰7개) SpringBoot(Web MVC)와 MyBatis프레임워크를 사용하여 구현한 과제 프로젝트.
 									</p>
-									<br clear="right">
 									<br>
-									<p>
-										<a href="#" target = "_blank">기능정의서</a>&nbsp; | &nbsp;<a href="#" target = "_blank">ERD(Table+View)</a>&nbsp; |&nbsp;
-										<a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
-									</p>
-									<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-									<ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Spring</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">JavaScript(JQuery)</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">SQL</span></li>
-									</ul>
 								</div>
-
 							</article>
 
+							<!-- Diary -->
 							<article class="resume-timeline-item position-relative pb-5">
-
 								<div class="resume-timeline-item-header mb-2">
 									<div class="d-flex flex-column flex-md-row">
 										<h3 class="resume-position-title font-weight-bold mb-1">Diary</h3>
@@ -152,57 +208,86 @@
 									<div class="resume-position-time">2021.04.21 - 2021.04.28</div>
 								</div>
 								<div class="resume-timeline-item-desc">
-									<p align=justify>
-										달력에 일정을 적어 관리하는 간단한 Diary 페이지.
-									</p>
-									<br clear="right">
-									<br>
+									<img src="assets/images/mallAdmin1.png" alt="임시파일" align=right vspace=20 hspace=20 width="400px" height="300px"><br>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">프로젝트 방식</h4>
+										<p>Model 2</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">개발 환경</h4>
+										<p>Window 10</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 프로그램</h4>
+										<p>Spring Tool Suite, HeidiSQL </p>
+										
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 언어</h4>
+										<p>Java, HTML5, JavaScript(JQuery), SQL</p>
+									
+									<!-- 링크 -->
 									<p>
-										<a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>&nbsp;
 									</p>
-									<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-									<ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">SQL</span></li>
-									</ul>
+									
+									<br clear="right">
+									
+									<p align=justify>
+										캘린더로 간단한 일정관리를 할 수 있는 diary 페이지. 
+									</p>
+									<br>
 								</div>
-
 							</article>
 
+							<!-- 이북몰 -->
 							<article class="resume-timeline-item position-relative">
-
 								<div class="resume-timeline-item-header mb-2">
 									<div class="d-flex flex-column flex-md-row">
-										<h3 class="resume-position-title font-weight-bold mb-1">Ebook Mall Admin/Client</h3>
+										<h3 class="resume-position-title font-weight-bold mb-1">Ebook-Mall Admin/Client</h3>
 									</div>
 									<div class="resume-position-time">2021.03.15 - 2021.04.21</div>
 								</div>
 								<div class="resume-timeline-item-desc">
+									<img src="assets/images/mallAdmin1.png" alt="임시파일" align=right vspace=20 hspace=20 width="400px" height="300px"><br>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">프로젝트 방식</h4>
+										<p>Admin - Model 1<br>Client - Model 2</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">개발 환경</h4>
+										<p>Window 10</p>
+									
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 프로그램</h4>
+										<p>Eclipse, HeidiSQL </p>
+										
+									<h4 class="resume-timeline-item-desc-heading font-weight-bold">사용 언어</h4>
+										<p>Java, HTML5, JavaScript(JQuery), SQL</p>
+									
+									<!-- 링크 -->
+									<p>
+										Admin : 
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>&nbsp;
+										&nbsp;&nbsp;
+										Client : 
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">Github</button></a>&nbsp;
+										<a href="#" target = "_blank"><button type="button" class="btn btn-outline-secondary btn-sm">AWS</button></a>
+									</p>
+									
+									<br clear="right">
 									<p align=justify>
 										Ebook Mall 설명
 									</p>
-									<br clear="right">
 									<br>
-									<p>
-										Admin : <a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
-									</p>
-									<p>
-										Client : <a href="#" target = "_blank">개발소스url(Github)</a>&nbsp; | &nbsp;<a href="#" target = "_blank">서비스url(AWS)</a>
-									</p>
-									<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-									<ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">JSP</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-										<li class="list-inline-item"><span class="badge badge-primary badge-pill">SQL</span></li>
-									</ul>
 								</div>
 							</article>
 						</div>
 					</div>
 				</section>
-			
+				
+				<section class="resume-section github-section mb-5">
+					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Github</h2>
+					<div class="resume-section-content">
+						<div id="feed"></div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</article>
